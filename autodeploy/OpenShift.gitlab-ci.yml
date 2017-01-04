@@ -1,4 +1,5 @@
 image: registry.gitlab.com/gitlab-examples/openshift-deploy
+  # https://gitlab.com/gitlab-examples/openshift-deploy/blob/master/README.md describes the scripts that are in here.
 
 variables:
   # Application deployment domain
