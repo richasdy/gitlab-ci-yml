@@ -26,7 +26,6 @@ format:
         - go test -race $(go list ./... | grep -v /vendor/)
 
 compile:
-    image: golang:1.7.3
     stage: build
     script:
         - cd /go/src/mydomainperso/repos/projectname
