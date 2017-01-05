@@ -8,6 +8,7 @@ image: golang:latest
 # Thus, making a symbolic link corrects this.
 before_script:
     - ln -s /builds /go/src/mydomainperso.com
+    - cd /go/src/mydomainperso.com/repos/projectname
 
 stages:
     - test
@@ -16,7 +17,6 @@ stages:
 format:
     stage: test
     script:
-        - cd /go/src/mydomainperso.com/repos/projectname
         # Add here all the dependencies, or use glide/govendor to get
         # them automatically.
         # - curl https://glide.sh/get | sh
@@ -27,7 +27,6 @@ format:
 compile:
     stage: build
     script:
-        - cd /go/src/mydomainperso.com/repos/projectname
         # Add here all the dependencies, or use glide/govendor/...
         # to get them automatically.
         - go get github.com/alecthomas/kingpin
